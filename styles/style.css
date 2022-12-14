@@ -275,3 +275,39 @@ img{
 .biography li span:last-child{
     font-weight: 300;
 }
+
+/* appearance */
+.appearance{
+    display: none;
+}
+.appearance li{
+    margin: 3.2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.appearance li span:first-child i{
+    color: var(--yellow-color);
+    margin-right: 1.4rem;
+}
+.appearance li span:first-child{
+    text-transform: capitalize;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 4rem;
+}
+.appearance li span:last-child{
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: var(--red-color);
+    border-radius: 2rem;
+    padding: 0 1rem;
+    text-align: right;
+}
