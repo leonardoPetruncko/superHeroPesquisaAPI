@@ -1,173 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquise um Super Herói</title>
-
-    <link rel="stylesheet" href="styles\style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>Find Your SuperHero</title>
+    <link rel = "stylesheet" href = "styles\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
-    <div class="main-wrapper">
-        <div class="app">
-
-            <!-- APP HEADER -->
-
-            <div class="app-header">
-                <h2 class="app-header-title">Super<span>Hero.</span></h2>
-                <form class="app-header-seach">
-                    <input type="text" class="form-control" placeholder="Seach your SuperHero Here" name="search">
-                    <button type="submit" class="search-btn">
-                        <i class="fas fa-search"></i>
+    <div class = "main-wrapper">
+        <div class = "app">
+            <!-- app header -->
+            <div class = "app-header">
+                <h2 class = "app-header-title">Super<span>Hero.</span></h2>
+                <form class = "app-header-search">
+                    <input type = "text" class = "form-control" placeholder="Search your superhero here ..." name = "search">
+                    <button type = "submit" class = "search-btn">
+                        <i class = "fas fa-search"></i>
                     </button>
-                    <div class="search-list" id="search-list">
-                        <!-- <img src="images/thumbnail-batman.jpg" alt="">
-                        <p>Batman</p> -->
+                    <div class = "search-list" id = "search-list">
+                        <!-- <div class = "search-list-item">
+                            <img src = "images/thumbnail-batman.jpg" alt = "">
+                            <p>Batman</p>
+                        </div> -->
                     </div>
                 </form>
             </div>
+            <!-- end of app header -->
 
-            <!-- fim APP HEADER -->
-
-            <div class="app-body">
-                <div class="app-body-content">
-
-                    <!-- app body Thumbanil -->
-
-                    <div class="app-body-content-thumbnail">
-                        <img src="images\thumbnail-batman.jpg">
+            <div class = "app-body">
+                <div class = "app-body-content">
+                    <!-- app body thumbnail -->
+                    <div class = "app-body-content-thumbnail">
+                        <img src = "images/thumbnail-batman.jpg">
                     </div>
+                    <!-- end of app body thumbnail -->
+                    
+                    <div class = "app-body-content-list">
+                        <div class = "name">Batman</div>
 
-                    <!-- fim app body Thumbnail -->
-
-                    <div class="app-body-content-list">
-                        <div class="name">Batman</div>
-
-                        <!-- tabs Head -->
-                        <div class="app-body-tabs-head">
-                            <button type="button" class="tab-head-single" data-id="1">
+                        <!-- tabs head -->
+                        <div class = "app-body-tabs-head">
+                            <button type = "button" class = "tab-head-single" data-id = "1">
                                 <span>powerstats</span>
                             </button>
-
-                            <button type="button" class="tab-head-single" data-id="2">
+                            <button type = "button" class = "tab-head-single" data-id = "2">
                                 <span>biography</span>
                             </button>
-
-                            <button type="button" class="tab-head-single" data-id="3">
+                            <button type = "button" class = "tab-head-single" data-id = "3">
                                 <span>appearance</span>
                             </button>
-
-                            <button type="button" class="tab-head-single" data-id="4">
+                            <button type = "button" class = "tab-head-single" data-id = "4">
                                 <span>connections</span>
                             </button>
                         </div>
+                        <!-- end of tabs head -->
 
-                        <!-- fim tabs Head -->
-
-                        <!-- tabs body-->
-
-                        <div class="app-body-tabs-body">
-
-                            <!-- Powerstats tab -->
-
-                            <ul class="tab-body-single 
-                            Powerstats">
+                        <!-- tabs body -->
+                        <div class = "app-body-tabs-body">
+                            <!-- powerstats tab -->
+                            <ul class = "tab-body-single powerstats">
                                 <li>
                                     <div>
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <span>Intelligence</span>
+                                        <i class = "fa-solid fa-shield-halved"></i>
+                                        <span>intelligence</span>
                                     </div>
                                     <span>100</span>
                                 </li>
-
                                 <li>
                                     <div>
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <span>Strength</span>
+                                        <i class = "fa-solid fa-shield-halved"></i>
+                                        <span>strength</span>
                                     </div>
-                                    <span>100</span>
+                                    <span>26</span>
                                 </li>
-
                                 <li>
                                     <div>
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <span>Speed</span>
+                                        <i class = "fa-solid fa-shield-halved"></i>
+                                        <span>speed</span>
                                     </div>
-                                    <span>100</span>
+                                    <span>27</span>
                                 </li>
-
                                 <li>
                                     <div>
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <span>Durability</span>
+                                        <i class = "fa-solid fa-shield-halved"></i>
+                                        <span>durability</span>
                                     </div>
-                                    <span>100</span>
+                                    <span>50</span>
                                 </li>
-
                                 <li>
                                     <div>
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <span>Power</span>
+                                        <i class = "fa-solid fa-shield-halved"></i>
+                                        <span>power</span>
                                     </div>
-                                    <span>100</span>
+                                    <span>47</span>
                                 </li>
-
                                 <li>
                                     <div>
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <span>Combat</span>
+                                        <i class = "fa-solid fa-shield-halved"></i>
+                                        <span>combat</span>
                                     </div>
                                     <span>100</span>
                                 </li>
                             </ul>
-
-                            <!-- fim powerstats tab -->
+                            <!-- end of powerstats tab -->
 
                             <!-- biography tab -->
-
-                            <ul class="tab-body-single 
-                            Biography">
+                            <ul class = "tab-body-single biography">
                                 <li>
                                     <span>full name</span>
-                                    <span>Terry mcginnis</span>
+                                    <span>terry mcginnis</span>
                                 </li>
-
                                 <li>
                                     <span>alert-egos</span>
-                                    <span>no alter egos found</span>
+                                    <span>no alter egos found.</span>
                                 </li>
-
                                 <li>
                                     <span>aliases</span>
                                     <span>Batman II, The Tomorrow Knight, Batman Beyond</span>
                                 </li>
-
                                 <li>
                                     <span>place-of-birth</span>
                                     <span>Gothan City, 25th Century</span>
                                 </li>
-
                                 <li>
-                                    <span>firts-apperancce</span>
+                                    <span>first-apperance</span>
                                     <span>Batman Beyond #1</span>
                                 </li>
-
                                 <li>
                                     <span>publisher</span>
                                     <span>DC Comics</span>
                                 </li>
                             </ul>
+                            <!-- end of biography tab -->
 
-                            <!-- fim biography tab -->
-
-                             <!-- appearance -->
+                            <!-- appearance -->
                             <ul class = "tab-body-single appearance">
                                 <li>
                                     <span>
@@ -206,7 +175,7 @@
                                     <span>black</span>
                                 </li>
                             </ul>
-                            <!-- fim appearance -->
+                            <!-- end of appearance -->
 
                             <!-- connections -->
                             <ul class = "tab-body-single connections">
@@ -219,14 +188,16 @@
                                     <span>Bruce Wayne (biological father), Warren McGinnis (father, deceased), Mary McGinnis (mother), Matt McGinnis (brother)</span>
                                 </li>
                             </ul>
-                            <!-- fim connections -->
+                            <!-- end of connections -->
                         </div>
-                        <!-- fim tabs body -->
+                        <!-- end of tabs body -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 
+    <script src = "JS\script.js"></script>
 </body>
 </html>
