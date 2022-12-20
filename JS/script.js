@@ -84,3 +84,125 @@ searchList.addEventListener('click', (event) => {
     showSuperheroDetails(singleData);
     searchList.innerHTML = "";
 });
+
+const showSuperheroDetails = (data) => {
+    console.log(data);
+    document.querySelector('.app-body-content-thumbnail').innerHTML = `
+        <img src = "${data[0].image.url}">
+    `;
+
+    document.querySelector('.name').textContent = data[0].name;
+    document.querySelector('.powerstats').innerHTML = `
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halved"></i>
+            <span>Inteligência</span>
+        </div>
+        <span>${data[0].powerstats.intelligence}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halved"></i>
+            <span>Força</span>
+        </div>
+        <span>${data[0].powerstats.strength}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halved"></i>
+            <span>Rapidez</span>
+        </div>
+        <span>${data[0].powerstats.speed}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halved"></i>
+            <span>Durabilidade</span>
+        </div>
+        <span>${data[0].powerstats.durability}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halved"></i>
+            <span>Poder</span>
+        </div>
+        <span>${data[0].powerstats.power}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halved"></i>
+            <span>Combate</span>
+        </div>
+        <span>${data[0].powerstats.combat}</span>
+    </li>
+    `;
+
+    document.querySelector('.biography').innerHTML = `
+    <li>
+        <span>Nome Completo</span>
+        <span>${data[0].biography['full-name']}</span>
+    </li>
+    <li>
+        <span>Apelido</span>
+        <span>${data[0].biography['aliases']}</span>
+    </li>
+    <li>
+        <span>Local de nasciment</span>
+        <span>${data[0].biography['place-of-birth']}</span>
+    </li>
+    <li>
+        <span>Primeira aparição</span>
+        <span>${data[0].biography['first-appearance']}</span>
+    </li>
+    <li>
+        <span>Editor</span>
+        <span>${data[0].biography['publisher']}</span>
+    </li>
+    `;
+
+    document.querySelector('.appearance').innerHTML = `
+    <li>
+        <span>
+            <i class = "fas fa-star"></i> Gênero
+        </span>
+        <span>${data[0].appearance['gender']}</span>
+    </li>
+    <li>
+        <span>
+            <i class = "fas fa-star"></i> Raça
+        </span>
+        <span>${data[0].appearance['race']}</span>
+    </li>
+    <li>
+        <span>
+            <i class = "fas fa-star"></i> Altura
+        </span>
+        <span>${data[0].appearance['height'][0]}</span>
+    </li>
+    <li>
+        <span>
+            <i class = "fas fa-star"></i> Peso
+        </span>
+        <span>${data[0].appearance['weight'][0]}</span>
+    </li>
+    <li>
+        <span>
+            <i class = "fas fa-star"></i> Cor dos olhos
+        </span>
+        <span>${data[0].appearance['eye-color']}</span>
+    </li>
+    <li>
+        <span>
+            <i class = "fas fa-star"></i> Cor do cabelo
+        </span>
+        <span>${data[0].appearance['hair-color']}</span>
+    </li>
+    `;
+
+    document.querySelector('.connections').innerHTML = `
+    <li>
+        <span>Grupo - Afiliação</span>
+        <span>${data[0].connections['group-affiliation']}</span>
+    </li>
+    `;
+}
