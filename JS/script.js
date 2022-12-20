@@ -37,3 +37,33 @@ const getInputValue = (event) => {
     let searchText = searchForm.search.value;
     fetchAllSuperHero(searchText);
 }
+
+
+searchForm.addEventListener('submit', getInputValue);
+
+const fetchAllSuperHero = async(searchText) => {
+    let url = `https://www.superheroapi.com/api.php/727054372039115/search/${searchText}`;
+    try{
+        const response = await fetch(url);
+        allData = await response.json();
+        if(allData.response === 'success'){
+            // console.log(allData);
+            showSearchList(allData.results);
+        }
+    } catch(error){
+        console.log(error);
+    }
+}
+
+const showSearchList = (data) => {
+    searchList.innerHTML = "";
+    data.forEach(dataItem => {
+        const divElem = document.createElement('div');
+        divElem.classList.add('search-list-item');
+        divElem.innerHTML = `
+            <img src = "${dataItem.image.url ? dataItem.image.url : ""}" alt = "">
+            <p data-id = "${dataItem.id}">${dataItem.name}</p>
+        `;
+        searchList.appendChild(divElem);
+    });
+}
