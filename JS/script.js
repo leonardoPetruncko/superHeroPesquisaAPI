@@ -67,3 +67,20 @@ const showSearchList = (data) => {
         searchList.appendChild(divElem);
     });
 }
+
+searchForm.search.addEventListener('keyup', () => {
+    if(searchForm.search.value.length > 1){
+        fetchAllSuperHero(searchForm.search.value);
+    } else {
+        searchList.innerHTML = "";
+    }
+});
+
+searchList.addEventListener('click', (event) => {
+    let searchId = event.target.dataset.id;
+    let singleData = allData.results.filter(singleData => {
+        return searchId === singleData.id;
+    })
+    showSuperheroDetails(singleData);
+    searchList.innerHTML = "";
+});
